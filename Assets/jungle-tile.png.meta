@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a06ce1ecc0b054ada95eeea546e0c560
+guid: 75e0b512ba1a24553b059a2157eecd18
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3784684924414844000
-    second: pitstop_car_1_0
+      213: 7652866780974667412
+    second: jungle-tile_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -40,9 +40,9 @@ TextureImporter:
     filterMode: 1
     aniso: 1
     mipBias: 0
-    wrapU: 1
-    wrapV: 1
-    wrapW: 1
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -96,17 +96,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pitstop_car_1_0
+      name: jungle-tile_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 463
-        height: 1010
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 06cd58af2e6e58430800000000000000
-      internalID: 3784684924414844000
+      spriteID: 496d1696ac1743a60800000000000000
+      internalID: 7652866780974667412
       vertices: []
       indices: 
       edges: []
@@ -135,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      pitstop_car_1_0: 3784684924414844000
+      jungle-tile_0: 7652866780974667412
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
