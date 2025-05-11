@@ -7,12 +7,13 @@ public class Bomb : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D other)
     {
+        onBomb.Invoke();
+
         var iscar = other.GetComponent<GameController>() != null;
         if (!iscar) return;
 
         var enemies = FindObjectsByType<MovingEnemy>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
         foreach(var e in enemies) Destroy(e.gameObject);
-        onBomb.Invoke();
     }
 
 }
