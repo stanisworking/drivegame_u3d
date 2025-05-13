@@ -14,6 +14,8 @@ public class Bomb : MonoBehaviour
 
         var enemies = FindObjectsByType<MovingEnemy>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
         foreach(var e in enemies) Destroy(e.gameObject);
+
+        Destroy(this.gameObject);
     }
 
 }
