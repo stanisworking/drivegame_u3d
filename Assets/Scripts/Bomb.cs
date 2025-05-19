@@ -15,8 +15,6 @@ public class Bomb : MonoBehaviour
 
         onBomb.Invoke();
 
-        Debug.Log("Here");
-
         Destroy(this.gameObject);
     }
 

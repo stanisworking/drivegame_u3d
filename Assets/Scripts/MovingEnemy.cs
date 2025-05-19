@@ -4,12 +4,14 @@ using Random = UnityEngine.Random;
 
 public class MovingEnemy : MonoBehaviour
 {
-    public CheckCollider leftCheck;
-    public CheckCollider rightCheck;
+    // public Collider2D leftCheck;
+    // public Collider2D rightCheck;
 
     public Vector2 speed;
     
     public Rigidbody2D body;
+
+    // public LayerMask checkLayers;
 
     private void Start()
     {
@@ -17,15 +19,25 @@ public class MovingEnemy : MonoBehaviour
         body.linearVelocityY = speed.y;
     }
 
-    private void FixedUpdate()
-    {
-        if (leftCheck.IsOverlap())
-        {
-            body.linearVelocityX = speed.x;
-        }  
-        else if (rightCheck.IsOverlap())
-        {
-            body.linearVelocityX = -speed.x;
-        }
+    // private void FixedUpdate()
+    // {
+    //     if (leftCheck.IsTouchingLayers(checkLayers.value))
+    //     {
+    //         body.linearVelocityX = speed.x;
+    //     }  
+    //     else if (rightCheck.IsTouchingLayers(checkLayers.value))
+    //     {
+    //         body.linearVelocityX = -speed.x;
+    //     }
+    // }
+
+    public void MoveRight() {
+        body.linearVelocityX = speed.x;
+        body.linearVelocityY = speed.y;
+   }
+
+    public void MoveLeft() {
+        body.linearVelocityX = -speed.x;
+        body.linearVelocityY = speed.y;        
     }
 }
