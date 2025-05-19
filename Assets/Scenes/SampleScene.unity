@@ -5231,6 +5231,7 @@ GameObject:
   - component: {fileID: 501931863}
   - component: {fileID: 501931864}
   - component: {fileID: 501931865}
+  - component: {fileID: 501931866}
   m_Layer: 8
   m_Name: Car
   m_TagString: Untagged
@@ -5302,7 +5303,7 @@ Transform:
   m_GameObject: {fileID: 501931857}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: 0.08, y: -1.93, z: 0}
+  m_LocalPosition: {x: 0.02, y: -2.96, z: 0}
   m_LocalScale: {x: 0.15, y: 0.15, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5445,7 +5446,7 @@ AudioSource:
   m_GameObject: {fileID: 501931857}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 1340173174509080210, guid: cb86ba9e82dc61043a577b60167070d9, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
@@ -5573,6 +5574,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 501931866}
+        m_TargetAssemblyTypeName: AudioDucker, Assembly-CSharp
+        m_MethodName: Duck
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   onCollisionExit:
     m_PersistentCalls:
       m_Calls:
@@ -5580,6 +5593,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 501931866}
+        m_TargetAssemblyTypeName: AudioDucker, Assembly-CSharp
+        m_MethodName: Unduck
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5628,6 +5653,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 501931866}
+        m_TargetAssemblyTypeName: AudioDucker, Assembly-CSharp
+        m_MethodName: Duck
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   onCollisionExit:
     m_PersistentCalls:
       m_Calls:
@@ -5643,6 +5680,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 501931866}
+        m_TargetAssemblyTypeName: AudioDucker, Assembly-CSharp
+        m_MethodName: Unduck
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &501931866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501931857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d97991f0e248b94f94e0603df7fe4f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normalSnapshot: {fileID: 24500006, guid: cb86ba9e82dc61043a577b60167070d9, type: 2}
+  duckedSnapshot: {fileID: 7916575060606022389, guid: cb86ba9e82dc61043a577b60167070d9, type: 2}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -6616,7 +6679,7 @@ AudioSource:
   m_GameObject: {fileID: 979768984}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -4583743471493885370, guid: cb86ba9e82dc61043a577b60167070d9, type: 2}
   m_audioClip: {fileID: 8300000, guid: 926492b5912648e4791dfa19b825484b, type: 3}
   m_Resource: {fileID: 8300000, guid: 926492b5912648e4791dfa19b825484b, type: 3}
   m_PlayOnAwake: 1
