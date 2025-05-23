@@ -1,24 +1,43 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class CheckCollider : MonoBehaviour
+[System.Serializable]
+public class CollisionTarget
 {
-    public Collider2D checkCollider;
-
+    public Collider2D collider;
     public UnityEvent onCollisionEnter;
     public UnityEvent onCollisionExit;
+}
+
+public class CheckCollider : MonoBehaviour
+{
+    public CollisionTarget[] targets;
 
     public void OnCollisionEnter2D(Collision2D other)
     {
-        if(other.collider == checkCollider) {
-            onCollisionEnter.Invoke();
+        foreach (CollisionTarget target in targets)
+        {
+            if (other.collider == target.collider)
+            {
+                Debug.Log("Collision");
+                target.onCollisionEnter.Invoke();
+                return;
+            }
         }
+
+
     }
 
     public void OnCollisionExit2D(Collision2D other)
     {
-        if(other.collider == checkCollider) {
-            onCollisionExit.Invoke();
+        foreach (CollisionTarget target in targets)
+        {
+            if (other.collider == target.collider)
+            {
+                target.onCollisionExit.Invoke();
+                return;
+            }
         }
     }
 

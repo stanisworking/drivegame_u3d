@@ -7,10 +7,10 @@ public class AudioDucker : MonoBehaviour
     public AudioMixerSnapshot duckedSnapshot;
 
     public void Duck(){        
-        duckedSnapshot.TransitionTo(0.5f);
+        duckedSnapshot.TransitionTo(0.01f);
     }
 
     public void Unduck(){
-        normalSnapshot.TransitionTo(0.5f);
+        normalSnapshot.TransitionTo(1.0f);
     }
 }
